@@ -1,13 +1,14 @@
 import React, { useState } from 'react';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { getMovies } from '../features/moviesSlice';
 import { useNavigate } from 'react-router-dom';
 
 const SearchBar = () => {
   const [searchQuery, setSearchQuery] = useState('');
-  const [searchType, setSearchType] = useState('genre'); // Default search type
+  const [searchType, setSearchType] = useState('genre');
   const dispatch = useDispatch();
   const navigate = useNavigate();
+  const genres = useSelector((state) => state.movies.genres);
 
   const handleSearch = () => {
     const searchParams = { [searchType]: searchQuery };
@@ -25,12 +26,26 @@ const SearchBar = () => {
         <option value="year">Year</option>
         <option value="actors">Actors</option>
       </select>
-      <input
-        type="text"
-        placeholder={`Enter ${searchType}`}
+      {searchType === 'genre' ? (
+        <select
         value={searchQuery}
         onChange={(e) => setSearchQuery(e.target.value)}
-      />
+      >
+        <option value="">Select a genre</option>
+        {genres.map((genre) => (
+          <option key={genre.id} value={genre.id.toString()}>
+            {genre.name}
+          </option>
+        ))}
+      </select>
+      ) : (
+        <input
+          type="text"
+          placeholder={`Enter ${searchType}`}
+          value={searchQuery}
+          onChange={(e) => setSearchQuery(e.target.value)}
+        />
+      )}
       <button onClick={handleSearch}>Search</button>
     </div>
   );

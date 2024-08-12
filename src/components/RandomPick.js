@@ -1,11 +1,12 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { getRandomMovie } from '../features/moviesSlice';
 import { useNavigate } from 'react-router-dom';
+import { getRandomMovie } from '../features/moviesSlice';
 
 const RandomPick = () => {
   const dispatch = useDispatch();
   const randomMovie = useSelector((state) => state.movies.randomMovie);
+  const status = useSelector((state) => state.movies.status);
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -13,8 +14,13 @@ const RandomPick = () => {
   }, [dispatch]);
 
   const handleClick = () => {
-    navigate(`/movie/${randomMovie.id}`);
+    if (randomMovie && randomMovie.id) {
+      navigate(`/movie/${randomMovie.id}`);
+    }
   };
+
+  if (status === 'loading') return <div>Loading...</div>;
+  if (status === 'failed') return <div>Failed to load random movie</div>;
 
   return (
     <div className="random-pick">
