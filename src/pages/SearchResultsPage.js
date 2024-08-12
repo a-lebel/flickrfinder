@@ -27,17 +27,19 @@ const SearchResultsPage = () => {
 
   return (
     <div>
-      <button onClick={() => navigate('/')}>New Search</button>
-      <div className="movie-grid">
-        {movies.slice(0, visibleMovies).map((movie) => (
-          <MovieCard key={movie.id} movie={movie} />
-        ))}
-      </div>
-      {visibleMovies < movies.length && (
-        <button onClick={handleLoadMore}>Load More</button>
-      )}
+    <button className="route-button" onClick={() => navigate('/')}>New Search</button>
+    <div className="movie-grid">
+      {movies.slice(0, visibleMovies).map((movie) => (
+        <div className="movie-element" key={movie.id}>
+          <MovieCard movie={movie} />
+        </div>
+      ))}
     </div>
-  );
+    {visibleMovies < movies.length && (
+      <button className="secondaryButton" onClick={handleLoadMore}>Load More</button>
+    )}
+  </div>
+);
 };
 
 export default SearchResultsPage;

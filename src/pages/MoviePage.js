@@ -29,11 +29,13 @@ const MoviePage = () => {
 
   return (
     <div className="movie-page">
+      <div  className="movie-img-container">
       <img
         src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
         alt={movie.title}
         className="movie-header"
       />
+      </div>
       <div className="movie-details">
         <h1>{movie.title}</h1>
         <p>{movie.overview}</p>
@@ -44,7 +46,7 @@ const MoviePage = () => {
       <div className="where-to-watch">
   <h2>Where to Watch</h2>
   <WhereToWatch watchProviders={movie.watchProviders} />
-  <button onClick={() => navigate(-1)}>Go Back to Results</button>
+  <button onClick={() => navigate(-1)}>Go Back</button>
     </div>
     </div>
   );

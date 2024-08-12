@@ -18,7 +18,7 @@ const SearchBar = () => {
 
   return (
     <div className="search-bar">
-      <select
+      <select className="search-type"
         value={searchType}
         onChange={(e) => setSearchType(e.target.value)}
       >
@@ -27,7 +27,7 @@ const SearchBar = () => {
         <option value="actors">Actors</option>
       </select>
       {searchType === 'genre' ? (
-        <select
+        <select className="input-field" 
         value={searchQuery}
         onChange={(e) => setSearchQuery(e.target.value)}
       >
@@ -39,7 +39,7 @@ const SearchBar = () => {
         ))}
       </select>
       ) : (
-        <input
+        <input className="input-field"
           type="text"
           placeholder={`Enter ${searchType}`}
           value={searchQuery}

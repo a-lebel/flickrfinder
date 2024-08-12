@@ -10,7 +10,9 @@ const MovieCard = ({ movie }) => {
 
   return (
     <div className="movie-card" onClick={handleViewMore}>
-      <img src={`https://image.tmdb.org/t/p/w300${movie.poster_path}`} alt={movie.title} />
+      <div className="movie-card-container">
+        <img src={`https://image.tmdb.org/t/p/w300${movie.poster_path}`} alt={movie.title} />
+      </div>
       <h3>{movie.title}</h3>
       <p>{movie.overview.slice(0, 100)}...</p>
       <p>Year: {movie.release_date.split('-')[0]}</p>

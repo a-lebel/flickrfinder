@@ -5,9 +5,15 @@ import RandomPick from '../components/RandomPick';
 const HomePage = () => {
   return (
     <div>
-      <Banner />
-      <h2>Random Pick of the Day</h2>
-      <RandomPick />
+      <h2 id="logo">FlickFinder</h2>
+      <header>
+        <Banner />
+        <div className="randomPicker">
+        <h3>... or let our random picker decide for you</h3>
+        <RandomPick />
+        </div>
+      </header>
+
     </div>
   );
 };

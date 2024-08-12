@@ -25,10 +25,14 @@ const RandomPick = () => {
   return (
     <div className="random-pick">
       {randomMovie && (
-        <div onClick={handleClick}>
-          <img src={`https://image.tmdb.org/t/p/w500${randomMovie.poster_path}`} alt={randomMovie.title} />
-          <h2>{randomMovie.title}</h2>
-          <button>View More</button>
+        <div className="randomMovie" onClick={handleClick}>
+          <div className="randomMovieimg">
+             <img src={`https://image.tmdb.org/t/p/w500${randomMovie.poster_path}`} alt={randomMovie.title} />
+          </div>
+          <div className='movie-info'>
+              <h3>{randomMovie.title}</h3>
+             <button className='secondaryButton'>View More</button>
+          </div>
         </div>
       )}
     </div>
