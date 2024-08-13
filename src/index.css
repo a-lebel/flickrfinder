@@ -14,6 +14,17 @@
   }
 }
 
+@keyframes entradaDer {
+  from {
+      opacity: 0;
+      transform: translateX(50px);
+  }
+  to {
+      opacity: 1;
+      transform: translateX(0);
+  }
+}
+
 body {
   margin: 2% 5% 5% 5%;
   -webkit-font-smoothing: antialiased;
@@ -323,7 +334,7 @@ button {
   width: 500px;
   border-radius: 15px;
 
-  animation: slideup 0.5s ease-out forwards;
+  animation: entradaDer 0.5s ease-out forwards;
 }
 
 .movie-img-container img {
