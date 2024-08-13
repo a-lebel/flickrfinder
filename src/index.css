@@ -3,6 +3,17 @@
   
 }
 
+@keyframes slideup {
+  from {
+      opacity: 0;
+      transform: translateY(80px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
 body {
   margin: 2% 5% 5% 5%;
   -webkit-font-smoothing: antialiased;
@@ -52,11 +63,16 @@ header {
   background-color: rgba(22, 5, 34, 0.35);
   border-radius: 20px;
   align-items: center;
+
+  animation: slideup 0.5s ease-out forwards;
 }
 
 h1 {
   font-size: 4.5rem;
   font-family: "Bricolage Grotesque";
+  margin-top: 0;
+
+  animation: slideup 0.5s ease-out forwards;
 }
 
 h3 {
@@ -83,6 +99,7 @@ p {
   align-items: center;
   margin-bottom: 20px;
 
+  animation: slideup 0.5s ease-out forwards;
 }
 
 .search-bar {
@@ -154,6 +171,8 @@ button {
   display: inline-flex;
   flex-wrap: wrap;
 
+  animation: slideup 0.5s ease-out forwards;
+
 }
 
 
@@ -210,6 +229,8 @@ button {
   grid-gap: 20px;
   margin: 20px 0;
   transition: transform 0.3s ease;
+
+  animation: slideup 1s ease-out forwards;
 }
 /*
 .movie-card {
@@ -301,6 +322,8 @@ button {
   height: 700px;
   width: 500px;
   border-radius: 15px;
+
+  animation: slideup 0.5s ease-out forwards;
 }
 
 .movie-img-container img {
@@ -360,6 +383,7 @@ button {
 
 h1 {
   font-size: 3rem;
+  margin-top: 25px;
 
   transition: 1s;
 }
