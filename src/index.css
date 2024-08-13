@@ -4,7 +4,7 @@
 }
 
 body {
-  margin: 2% 80px 5% 80px;
+  margin: 2% 5% 5% 5%;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-image: url(../public/backgroundapp.png);
@@ -48,7 +48,7 @@ header {
   max-width: 100%;
   min-width: fit-content;
   height: fit-content;
-  padding: 80px 110px;
+  padding: 5% 8%;
   background-color: rgba(22, 5, 34, 0.35);
   border-radius: 20px;
   align-items: center;
@@ -78,9 +78,10 @@ p {
 
 .banner {
   width: 45%;
-  min-width:350px;
+  min-width:200px;
   max-width: 100%;
   align-items: center;
+  margin-bottom: 20px;
 
 }
 
@@ -152,7 +153,7 @@ button {
   align-self: center;
   display: inline-flex;
   flex-wrap: wrap;
-  margin-top: 20px;
+
 }
 
 
@@ -324,12 +325,9 @@ button {
 
 @media only screen and (max-width: 1200px) {
 
-  .randomPicker {
-    margin-top: 20px;
-  }
 
   .banner {
-    max-width: 100%;
+    width: 100%;
   }
 }
 
@@ -358,12 +356,13 @@ h3 {
 }
 
 .randomPicker {
-  margin-top: 50px;
+
   width: 100%;
+  margin-top: 120px;
 }
 
 header {
-  padding:60px;
+  padding:5%;
 }
 
 .movie-img-container {
@@ -375,6 +374,10 @@ header {
 .movie-details {
   width: 100%;
   padding-left: 0;
+}
+
+.banner {
+  margin-bottom: 50px;
 }
 
 
@@ -399,17 +402,22 @@ header {
     margin-top: 20px;
   }
 
-  .randomPicker {
-    margin-top: 100px;
-  }
 
   .banner {
     max-width: 100%;
   }
 
   .header {
-    padding: 10px;
+    padding: 2%;
+    width: 100%;
   }
   
+  .input-field { 
+    width: 100%;
+  }
+
+  .search-type {
+    width: 100%;
+  }
   
 }
