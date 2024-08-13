@@ -1,11 +1,14 @@
 import React from 'react';
 import Banner from '../components/Banner';
 import RandomPick from '../components/RandomPick';
+import { Link } from 'react-router-dom';
 
 const HomePage = () => {
   return (
     <div>
-      <h2 id="logo">FlickFinder</h2>
+      <Link to="/">
+        <h2 id="logo">FlickFinder</h2>
+      </Link>
       <header>
         <Banner />
         <div className="randomPicker">

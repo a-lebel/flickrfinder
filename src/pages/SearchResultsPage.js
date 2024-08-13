@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import MovieCard from '../components/MovieCard';
+import { Link } from 'react-router-dom';
 
 
 const SearchResultsPage = () => {
@@ -15,7 +16,9 @@ const SearchResultsPage = () => {
 
   return (
     <div>
-      <h2 id="logo">FlickFinder</h2>
+      <Link to="/">
+        <h2 id="logo">FlickFinder</h2>
+      </Link>
     
     <div>
    

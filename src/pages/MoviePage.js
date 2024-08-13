@@ -3,6 +3,7 @@ import { useParams, useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import API_KEY from '../services/api';
 import WhereToWatch from '../components/WhereToWatch';
+import { Link } from 'react-router-dom';
 
 const MoviePage = () => {
   const { id } = useParams();
@@ -29,7 +30,9 @@ const MoviePage = () => {
 
   return (
     <div>
-    <h2 id="logo">FlickFinder</h2>
+      <Link to="/">
+        <h2 id="logo">FlickFinder</h2>
+      </Link>
     <div className="movie-page">
       
       <div  className="movie-img-container">
