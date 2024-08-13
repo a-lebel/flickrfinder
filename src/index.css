@@ -206,11 +206,12 @@ button {
 
 .movie-grid {
   display: grid;  
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Responsive grid */
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr)); /* Responsive grid */
   grid-gap: 20px;
   margin: 20px 0;
+  transition: transform 0.3s ease;
 }
-
+/*
 .movie-card {
   display: flex;
   flex-direction: column;
@@ -220,10 +221,24 @@ button {
   border-radius: 10px;
   overflow: hidden;
   text-align: center;
-  transition: transform 0.3s ease; /* Smooth hover effect */
+  transition: transform 0.3s ease;
   height: 600px;
   border: #fff 0.2px solid;
+} */
+
+.movie-card {
+  display: inline-flex;
+  width: 100%;
+  border: #fff 0.2px solid;
+  justify-content: space-between;
+  background-color: rgba(22, 5, 34, 0.35);
+  border-radius: 10px;
+  overflow: hidden;
+  text-align: center;
+  transition: transform 0.3s ease;
+
 }
+
 
 .movie-card:hover {
   transform: scale(1.05); /* Slightly enlarge on hover */
@@ -240,6 +255,8 @@ button {
   height: 100%;
   object-fit: cover;
   border-radius: 8px;
+  object-position: center;
+
 }
 
 .movieCardInfo {
@@ -419,5 +436,14 @@ header {
   .search-type {
     width: 100%;
   }
+
+  .movie-card {
+    width: 100%;
+  }
+
+  .movie-grid {
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Responsive grid */
+  }
   
+
 }
