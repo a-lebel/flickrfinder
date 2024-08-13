@@ -9,8 +9,8 @@ const HomePage = () => {
       <header>
         <Banner />
         <div className="randomPicker">
-        <h3>... or let our random picker decide for you</h3>
-        <RandomPick />
+          <h3>... or let our random picker decide for you</h3>
+          <RandomPick />
         </div>
       </header>
 

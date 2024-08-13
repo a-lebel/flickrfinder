@@ -29,7 +29,7 @@ header {
   display: inline-flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  width: 100%;
+  max-width: 100%;
   min-width: fit-content;
   height: fit-content;
   padding: 80px 110px;
@@ -62,8 +62,10 @@ p {
 
 .banner {
   width: 45%;
-  min-width: 500px;
+  min-width:350px;
+  max-width: 100%;
   align-items: center;
+
 }
 
 .search-bar {
@@ -341,6 +343,7 @@ h3 {
 
 .randomPicker {
   margin-top: 50px;
+  width: 100%;
 }
 
 header {
@@ -388,6 +391,9 @@ header {
     max-width: 100%;
   }
 
+  .header {
+    padding: 10px;
+  }
   
   
 }
