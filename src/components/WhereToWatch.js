@@ -2,10 +2,10 @@ import React from 'react';
 
 const WhereToWatch = ({ watchProviders }) => (
   <div className="where-to-watch">
-    <h4>Where to Watch</h4>
+    <h2>Where to Watch</h2>
     {watchProviders.flatrate && (
       <div>
-        <h5>Streaming</h5>
+        <h4>Streaming</h4>
         <ul>
           {watchProviders.flatrate.map(provider => (
             <li key={provider.provider_id}>{provider.provider_name}</li>
@@ -15,7 +15,7 @@ const WhereToWatch = ({ watchProviders }) => (
     )}
     {watchProviders.rent && (
       <div>
-        <h5>Rent</h5>
+        <h4>Rent</h4>
         <ul>
           {watchProviders.rent.map(provider => (
             <li key={provider.provider_id}>{provider.provider_name}</li>

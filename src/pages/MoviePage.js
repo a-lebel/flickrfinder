@@ -28,7 +28,10 @@ const MoviePage = () => {
   if (!movie) return <div>Loading...</div>;
 
   return (
+    <div>
+    <h2 id="logo">FlickFinder</h2>
     <div className="movie-page">
+      
       <div  className="movie-img-container">
       <img
         src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
@@ -37,16 +40,20 @@ const MoviePage = () => {
       />
       </div>
       <div className="movie-details">
-        <h1>{movie.title}</h1>
-        <p>{movie.overview}</p>
-        <p><strong>Main Actors:</strong> {movie.credits?.cast?.slice(0, 5).map(actor => actor.name).join(', ') || 'N/A'}</p>
-        <p><strong>Year:</strong> {movie.release_date.split('-')[0]}</p>
-        <p><strong>IMDB Rating:</strong> {movie.vote_average}</p>
+        <div className='movie-details-text'>
+          <h1>{movie.title}</h1>
+          <p>{movie.overview}</p>
+          <p><strong>Main Actors:</strong> {movie.credits?.cast?.slice(0, 5).map(actor => actor.name).join(', ') || 'N/A'}</p>
+          <p><strong>Year:</strong> {movie.release_date.split('-')[0]}</p>
+          <p><strong>IMDB Rating:</strong> {movie.vote_average}</p>
+        </div>
+        <div className="where-to-watch">
+          
+          <WhereToWatch watchProviders={movie.watchProviders} />
+        <button onClick={() => navigate(-1)}>Go Back</button>
+        </div>
       </div>
-      <div className="where-to-watch">
-  <h2>Where to Watch</h2>
-  <WhereToWatch watchProviders={movie.watchProviders} />
-  <button onClick={() => navigate(-1)}>Go Back</button>
+     
     </div>
     </div>
   );

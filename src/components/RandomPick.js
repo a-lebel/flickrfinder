@@ -31,7 +31,7 @@ const RandomPick = () => {
           </div>
           <div className='movie-info'>
               <h3>{randomMovie.title}</h3>
-             <button className='secondaryButton'>View More</button>
+             <button className='secondaryButton'>View Details</button>
           </div>
         </div>
       )}

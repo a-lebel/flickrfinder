@@ -30,8 +30,9 @@ header {
   flex-wrap: wrap;
   justify-content: space-between;
   width: 100%;
-  height: 750px;
-  padding: 110px;
+  min-width: fit-content;
+  height: fit-content;
+  padding: 80px 110px;
   background-color: rgba(22, 5, 34, 0.35);
   border-radius: 20px;
   align-items: center;
@@ -51,26 +52,33 @@ h3 {
 h4 {
   font-size: 1rem;
   font-family: "DM Sans";
-  font-weight: 300;
+  font-weight: 500;
+}
+
+p {
+  font-family: 'DM sans';
+  font-size: 0.9rem;
 }
 
 .banner {
   width: 45%;
+  min-width: 500px;
   align-items: center;
 }
 
 .search-bar {
   display: inline-flex;
-  justify-content: space-between;
+  justify-content: flex-start;
+  flex-wrap: wrap;
   width:100%;
   height: 50px;
-  margin-top: 20px;
   padding-top: 20px;
   padding-right: 20px;
 }
 
 .search-type {
   width: 20%;
+  min-width: 120px;
   height: 50px;
   padding: 15px;
   font-size: 0.9rem;
@@ -79,10 +87,13 @@ h4 {
   font-family: 'DM Sans';
   cursor: pointer;
   border-right: 16px solid transparent;
+  margin-right: 10px;
+  margin-top: 20px;
 }
 
 
 .input-field {
+  min-width: 200px;
   width: 55%;
   height: 50px;
   padding: 15px;
@@ -91,6 +102,8 @@ h4 {
   border-radius: 10px;
   font-family: 'DM Sans';
   border-right: 16px solid transparent;
+  margin-right: 10px;
+  margin-top: 20px;
 }
 
 button {
@@ -103,14 +116,15 @@ button {
   font-weight: 400;
   list-style: none outside none;
   margin: 0;
-  padding: 15px;
+  padding: 15px 30px;
   text-align: center;
   text-decoration: none;
   text-indent: 0;
-  width: 20%;
+  width: fit-content;
   cursor: pointer;
   height: 50px;
   border-radius: 10px;
+  margin-top: 20px;
 }
 
 .randomPicker {
@@ -118,13 +132,18 @@ button {
   height: 100%;
   align-items: flex-end;
   align-self: center;
+  display: inline-flex;
+  flex-wrap: wrap;
+  margin-top: 20px;
 }
 
 
 .randomMovie {
   display: inline-flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   align-items: flex-end;
+
 }
 
 .randomMovieimg {
@@ -147,7 +166,8 @@ button {
 }
 
 .movie-info {
-  width: 40%; /* Make sure it doesn't exceed image width */
+  width: 20%; /* Make sure it doesn't exceed image width */
+  min-width: 200px;
   height: 100%;
   z-index: 1; /* Ensure it's above the image */
   color: #fff;
@@ -159,40 +179,61 @@ button {
 .secondaryButton {
   background-color: #1E1C28;
   border: #fff 0.3px solid;
-  width: 100%;
+  width: fit-content;
   color: #fff;
+  padding: 15px 30px;
+  margin-right: 15px;
 }
 
 .movie-grid {
   display: grid;  
-  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); /* Responsive grid */
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Responsive grid */
   grid-gap: 20px;
   margin: 20px 0;
 }
 
-.movie-element {
+.movie-card {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  background-color: #1E1C28;
+  align-items: flex-end;
+  justify-content: space-between;
+  background-color: rgba(22, 5, 34, 0.35);
   border-radius: 10px;
   overflow: hidden;
-  padding: 15px;
   text-align: center;
   transition: transform 0.3s ease; /* Smooth hover effect */
+  height: 600px;
+  border: #fff 0.2px solid;
 }
 
-.movie-element:hover {
+.movie-card:hover {
   transform: scale(1.05); /* Slightly enlarge on hover */
 }
 
-.movie-element img {
+.movie-card-container {
+  height: 300px;
   width: 100%;
-  height: 350px;
+  overflow: hidden;
+}
+
+.movie-card img {
+  width: 100%;
+  height: 100%;
   object-fit: cover;
   border-radius: 8px;
-  margin-bottom: 10px;
+}
+
+.movieCardInfo {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: left;
+  padding: 20px;
+}
+
+.movieCardInfo p {
+  margin: 0;
+
 }
 
 .route-button {
@@ -201,23 +242,152 @@ button {
   background-color: #1E1C28;
 }
 
-.movie-card-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  background-color: #1E1C28;
-  border-radius: 10px;
-  overflow: hidden;
-  padding: 15px;
-  text-align: center;
-  transition: transform 0.3s ease; /* Smooth hover effect */
+.detailsmovie {
+  margin-top: 40px;
+  margin-bottom: 0px;
+
 }
 
-.movie-card {
+.buttons-search {
+  display: inline-flex;
+}
+
+.movie-page {
+  display: inline-flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
   width: 100%;
+}
+
+.movie-img-container {
+  height: 700px;
+  width: 500px;
+  border-radius: 15px;
+}
+
+.movie-img-container img {
   height: 100%;
+  width: 100%;
+  border-radius: 15px;
   object-fit: cover;
-  border-radius: 8px;
-  margin-bottom: 10px;
+}
+
+.movie-details {
+  width: 50%;
+  padding-left: 100px;
+}
+
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: inline-flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+  }
+  
+
+.where-to-watch li {
+  padding: 15px;
+  border: #fff 0.2px solid;
+  border-radius: 10px;
+  width: fit-content;
+  font-family: 'DM sans';
+  font-size: 1rem;
+  margin-right: 10px;
+  margin-top: 10px;
+}
+
+.where-to-watch h2 {
+  font-family: 'Dm Sans';
+}
+
+
+@media only screen and (max-width: 1200px) {
+
+  .randomPicker {
+    margin-top: 20px;
+  }
+
+  .banner {
+    max-width: 100%;
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  
+  body {
+    margin: 2% 20px 5% 20px;
+
+    transition: 1s;
+}
+
+h1 {
+  font-size: 3rem;
+
+  transition: 1s;
+}
+
+h3 {
+  font-size: 1.2rem;
+
+  transition: 1s;
+}
+
+.secondaryButton {
+  font-size: 0.9rem;
+}
+
+.randomPicker {
+  margin-top: 50px;
+}
+
+header {
+  padding:60px;
+}
+
+.movie-img-container {
+  width: 100%;
+
+  transition: 1s;
+}
+
+.movie-details {
+  width: 100%;
+  padding-left: 0;
+}
+
+
+
+}
+
+@media only screen and (max-width: 600px) {
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1.1rem;
+  }
+
+  .search-bar {
+    justify-content: flex-start;
+  }
+
+  button {
+    margin-top: 20px;
+  }
+
+  .randomPicker {
+    margin-top: 100px;
+  }
+
+  .banner {
+    max-width: 100%;
+  }
+
+  
+  
 }

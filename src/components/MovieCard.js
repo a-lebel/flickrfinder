@@ -13,10 +13,12 @@ const MovieCard = ({ movie }) => {
       <div className="movie-card-container">
         <img src={`https://image.tmdb.org/t/p/w300${movie.poster_path}`} alt={movie.title} />
       </div>
-      <h3>{movie.title}</h3>
+      <div className='movieCardInfo'>
+      <h4>{movie.title}</h4>
       <p>{movie.overview.slice(0, 100)}...</p>
       <p>Year: {movie.release_date.split('-')[0]}</p>
-      <button>View More</button>
+      <button className='detailsmovie'>View details</button>
+      </div>
     </div>
   );
 };
