@@ -3,26 +3,14 @@ import { useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import MovieCard from '../components/MovieCard';
 
+
 const SearchResultsPage = () => {
   const [visibleMovies, setVisibleMovies] = useState(10);
-    const movies = useSelector((state) => state.movies.movies);
-    console.log('Movies in Redux state:', movies);
-  
+  const movies = useSelector((state) => state.movies.movies);
   const navigate = useNavigate();
 
   const handleLoadMore = () => {
     setVisibleMovies((prevVisibleMovies) => prevVisibleMovies + 10);
-
-    const SearchResultsPage = () => {
-
-      const status = useSelector((state) => state.movies.status);
-      const error = useSelector((state) => state.movies.error);
-    
-      if (status === 'loading') return <div>Loading...</div>;
-      if (status === 'failed') return <div>Error: {error}</div>;
-  
-    };
-    
   };
 
   return (

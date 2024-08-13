@@ -6,12 +6,14 @@ export const getGenres = createAsyncThunk('movies/getGenres', async () => {
   return response;
 });
 
+/*
 const initialState = {
   movies: [],
   randomMovie: null,
   status: 'idle',
   error: null,
 };
+*/
 
 export const getMovies = createAsyncThunk(
   'movies/getMovies',
