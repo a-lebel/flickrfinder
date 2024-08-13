@@ -236,6 +236,7 @@ button {
   overflow: hidden;
   text-align: center;
   transition: transform 0.3s ease;
+  height: 300px;
 
 }
 
@@ -245,8 +246,8 @@ button {
 }
 
 .movie-card-container {
-  height: 300px;
-  width: 100%;
+  height: 100%;
+  width: 40%;
   overflow: hidden;
 }
 
@@ -260,6 +261,7 @@ button {
 }
 
 .movieCardInfo {
+  width: 60%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -439,10 +441,19 @@ header {
 
   .movie-card {
     width: 100%;
+    height: 350px;
   }
 
   .movie-grid {
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Responsive grid */
+  }
+
+  .movie-card-container {
+    width: 50%;
+  }
+
+  .movieCardInfo {
+    width: 50%;
   }
   
 
