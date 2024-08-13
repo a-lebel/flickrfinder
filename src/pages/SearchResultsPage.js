@@ -6,12 +6,12 @@ import { Link } from 'react-router-dom';
 
 
 const SearchResultsPage = () => {
-  const [visibleMovies, setVisibleMovies] = useState(9);
+  const [visibleMovies, setVisibleMovies] = useState(12);
   const movies = useSelector((state) => state.movies.movies);
   const navigate = useNavigate();
 
   const handleLoadMore = () => {
-    setVisibleMovies((prevVisibleMovies) => prevVisibleMovies + 9);
+    setVisibleMovies((prevVisibleMovies) => prevVisibleMovies + 12);
   };
 
   return (
