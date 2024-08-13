@@ -1,3 +1,35 @@
+# What is Flick Finder
+
+FlickFinder is a React and Redux application designed to help users discover and search for movies. Users can search by various criteria such as genre, year, or actors and view detailed information about each movie. The app also features a "Random Pick of the Day" to suggest a movie if the user is unsure what to watch.
+
+## Key Features
+
+Home Page
+
+Search Bar: A single input field where users can type keywords (genre, year, or actor) to search for movies.
+Random Pick of the Day: Displays a randomly selected movie with an image, title, and a link to view more details.
+Search Results Page
+
+Displays movies in a grid format with images, titles, and short descriptions.
+New Search Button: Takes the user back to the home page.
+Load More Button: Loads additional movie results in increments of 8.
+Movie Details Page
+
+Shows detailed information about the selected movie, including title, description, actors, year, and IMDb rating.
+Where to Watch: Lists platforms where the movie is available.
+Back to Results Button: Returns to the previous search results.
+
+## Tools
+
+The UI design was made in Figma, and the app was developed in VS code.
+
+## Future improvements
+
+* Add a filter function in the search results
+* Add a "Randomize again" button in the random pick so the user can get another option.
+* Link the movie page to the platform listed.
+* Posibility of watching the trailer of each movie.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
